@@ -8,13 +8,13 @@ const Navber = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/service">Service</Link>
+        <Link to="/services">Services</Link>
       </li>
       <li>
         <Link to="/blog">Blog</Link>
       </li>
       <li>
-        <Link to="/addservices">Add Service</Link>
+        <Link to="/addservice">Add Service</Link>
       </li>
       <li>
         <Link to="/review">My Review</Link>
@@ -49,14 +49,14 @@ const Navber = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          daisyUI
+          AreoStart.io
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuList}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login" className="btn">
+        <Link to="/signup" className="btn btn-primary">
           Register
         </Link>
       </div>

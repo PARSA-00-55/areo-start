@@ -4,7 +4,7 @@ const Review = ({ review }) => {
   const { name, img, details, location } = review;
   return (
     <section className="text-gray-600 body-font">
-      <div className="flex flex-wrap -m-4">
+      <div className="flex flex-wrap">
         <div className="p-4 ">
           <div className="h-full bg-gray-100 p-8 rounded">
             <svg

@@ -34,10 +34,10 @@ const Testimonial = () => {
 
   return (
     <section className="my-16 mt-[10rem]">
-      <div className="my-10">
+      <div className="my-10 ml-8">
         <div>
-          <h4 className="text-2xl text-primary font-black">Testimonial</h4>
-          <h2 className="text-5xl">What Our client Says</h2>
+          <h4 className="text-xl text-primary font-black">Testimonial</h4>
+          <h2 className="text-2xl">What our client Says</h2>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-3">
