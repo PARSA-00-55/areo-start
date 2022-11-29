@@ -6,7 +6,7 @@ const Blog = () => {
       <h2 className="text-5xl font-bold text-center">Blog section</h2>
       <div className="divider"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
-        <div className="card glass shadow-xl">
+        <div className="card glass shadow-xl bg-indigo-500 hover:bg-indigo-600">
           <div className="card-body">
             <h2 className="card-title">Difference between SQL and NoSQL?</h2>
             <p>
@@ -17,7 +17,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <div className="card glass shadow-xl">
+        <div className="card glass shadow-xl bg-indigo-500 hover:bg-indigo-600">
           <div className="card-body">
             <h2 className="card-title">What is JWT, and how does it work?</h2>
             <p>
@@ -29,7 +29,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <div className="card glass shadow-xl">
+        <div className="card glass shadow-xl bg-indigo-500 hover:bg-indigo-600">
           <div className="card-body">
             <h2 className="card-title">
               What is the difference between javascript and NodeJS?
@@ -42,7 +42,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <div className="card glass shadow-xl">
+        <div className="card glass shadow-xl bg-indigo-500 hover:bg-indigo-600">
           <div className="card-body">
             <h2 className="card-title">
               How does NodeJS handle multiple requests at the same time?

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
+import { RxAvatar } from "react-icons/rx";
 
 const Navber = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => console.log(err));
+  };
   const menuList = (
     <>
       <li>
@@ -16,9 +24,14 @@ const Navber = () => {
       <li>
         <Link to="/addservice">Add Service</Link>
       </li>
-      <li>
-        <Link to="/review">My Review</Link>
-      </li>
+      {/*  conditional if user loged in then this option will showed */}
+      {user?.uid ? (
+        <li>
+          <Link to="/review">My Review</Link>
+        </li>
+      ) : (
+        ""
+      )}
     </>
   );
   return (
@@ -56,9 +69,19 @@ const Navber = () => {
         <ul className="menu menu-horizontal p-0">{menuList}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/signup" className="btn btn-primary">
-          Register
-        </Link>
+        {user?.uid ? (
+          <button
+            className="btn btn-outline hover:btn-primary"
+            onClick={handleLogOut}
+          >
+            <RxAvatar className="text-2xl" />
+            &nbsp; Log-out
+          </button>
+        ) : (
+          <Link to="/signup" className="btn btn-primary">
+            Register
+          </Link>
+        )}
       </div>
     </div>
   );
