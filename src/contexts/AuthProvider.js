@@ -43,6 +43,7 @@ const AuthProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
+  // TODO : uploaded
   const authInfo = { createUser, signIn, user, logOut, loading };
 
   return (

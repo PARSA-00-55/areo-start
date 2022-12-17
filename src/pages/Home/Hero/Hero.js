@@ -5,8 +5,17 @@ const Hero = () => {
   return (
     <div className="hero mt-5">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img src={heroImg} className="lg:w-1/2 rounded-lg " />
-        <div className="lg:w-1/2 p-3">
+        <img
+          src={heroImg}
+          className="lg:w-1/2 rounded-lg "
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        />
+        <div
+          className="lg:w-1/2 p-3"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h1 className="text-5xl font-bold">
             Feel The Chill, Travel The World
           </h1>

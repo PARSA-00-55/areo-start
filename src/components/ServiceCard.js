@@ -1,7 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service, setServiceCountry }) => {
   const { name, description, price, rating, image } = service;
 
   return (
@@ -25,7 +25,13 @@ const ServiceCard = ({ service }) => {
             </span>
           </div>
           <div className="card-actions">
-            <button className="btn btn-primary">Details</button>
+            <label
+              htmlFor="service-modal"
+              className="btn btn-primary"
+              onClick={() => setServiceCountry(service)}
+            >
+              Details
+            </label>
           </div>
         </div>
       </div>

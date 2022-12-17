@@ -27,14 +27,7 @@ export const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>,
       },
-      {
-        path: "/addservice",
-        element: (
-          <PrivateRoute>
-            <AddService></AddService>,
-          </PrivateRoute>
-        ),
-      },
+
       {
         path: "/review",
         element: <Review></Review>,
@@ -46,6 +39,14 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/addservice",
+        element: (
+          <PrivateRoute>
+            <AddService></AddService>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "*",

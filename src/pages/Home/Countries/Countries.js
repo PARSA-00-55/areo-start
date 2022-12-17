@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ServiceCard from "../../../components/ServiceCard";
+import ServiceModal from "../../AddService/ServiceModal/ServiceModal";
 
 const Countries = () => {
   const countries = [
@@ -32,8 +33,12 @@ const Countries = () => {
       image: "https://i.ibb.co/34fGqw1/pexels-taryn-elliott-3889741.jpg",
     },
   ];
+  const [serviceCountry, setServiceCountry] = useState(null);
   return (
-    <div>
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    >
       <div className="divider my-10"></div>
       <div className="mb-5">
         <h2 className="text-5xl text-primary font-extrabold ">
@@ -43,9 +48,11 @@ const Countries = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-3">
         {countries.map((service) => (
-          <ServiceCard key={service._id} service={service}></ServiceCard>
+          <ServiceCard key={service._id} service={service} setServiceCountry={setServiceCountry}></ServiceCard>
         ))}
       </div>
+      {/* modal body */}
+      {serviceCountry && <ServiceModal serviceCountry={serviceCountry}></ServiceModal>}
       <div className="flex justify-center mt-10">
         <Link to="/services" className="btn btn-primary px-10">
           see more
