@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const [serviceCountry, setServiceCountry] = useState(null);
   useEffect(() => {
-    fetch("service.json")
+    fetch("https://areo-start-server-parsa-00-55.vercel.app/countries")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

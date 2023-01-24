@@ -10,6 +10,7 @@ const Hero = () => {
           className="lg:w-1/2 rounded-lg "
           data-aos="fade-left"
           data-aos-duration="2000"
+          alt="heroImg"
         />
         <div
           className="lg:w-1/2 p-3"
